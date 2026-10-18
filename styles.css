@@ -6,3 +6,18 @@
 @media(max-width:800px){.app-shell{display:block}.sidebar{height:auto;position:relative;padding:15px 22px;flex-direction:row;align-items:center;justify-content:space-between}.brand{width:120px;margin:0}.sidebar-label,.side-nav,.sidebar-footer{display:none}.topbar{height:55px;padding:0 20px}.breadcrumb{font-size:9px;letter-spacing:1px}.intro{min-height:280px;padding:35px 23px}.intro h1{font-size:36px}.workspace{padding:27px 20px 55px}.version{display:none}.form-grid{gap:14px}.action-cards{gap:12px}.panel{padding:24px}}
 @media(max-width:540px){.intro h1{font-size:31px}.intro p{font-size:12px}.intro-chips span{font-size:8px}.workspace h2{font-size:28px}.panel{padding:17px;border-radius:11px}.panel-heading{gap:12px}.panel-heading h3{font-size:17px}.panel-heading p{font-size:11px}.index{width:32px;height:32px;flex-basis:32px}.form-grid{grid-template-columns:1fr}.span-2{grid-column:auto}.tank-grid{grid-template-columns:repeat(3,1fr)}.tank-card span{font-size:12px}.energy-toggle label{flex:1}.action-cards{grid-template-columns:1fr}.save-panel{padding:20px}.save-actions{display:grid;grid-template-columns:1fr 1fr}.save-actions .btn{white-space:normal;text-align:center;padding:10px}.scheme-heading{display:block}.scheme-heading strong{display:block}.scheme-visual{height:160px}.item-scroller{overflow:auto}.items-table{min-width:620px}.top-link{font-size:10px}.workspace-title{align-items:flex-start}.footer{line-height:2}}
 @media print{@page{size:A4;margin:12mm}html,body{background:#fff!important}.app-shell,.toast{display:none!important}.print-area{display:block!important;margin:0!important;padding:0!important}.doc-page{display:block;page-break-inside:auto}.doc-section{page-break-inside:avoid}.doc-page h1{margin-top:2px}.doc-footer{page-break-inside:avoid}.doc-notice,.doc-section h2,.doc-table th,.doc-header{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+/* ORZEN V2: guía comercial y preguntas por sector */
+.call-guide{margin-bottom:20px;padding:26px 30px;background:#eaf2f8;border:1px solid #d4e3ee;border-radius:15px;display:grid;grid-template-columns: .9fr 1.25fr;gap:20px 35px}
+.call-guide h3{font:400 27px Georgia,serif;color:#0d3555;line-height:1.2;margin:12px 0}
+.call-guide p{font-size:12px;color:#45647d;margin:0;line-height:1.6}
+.call-guide ol{margin:0;padding-left:22px;display:grid;gap:7px;color:#214761;font-size:12px;font-weight:550;line-height:1.5}
+.call-guide li::marker{color:#3d85b7;font-weight:800}
+.call-guide .call-note{grid-column:1/-1;border-top:1px solid #cbdde9;padding-top:13px;color:#496780}
+.sector-questions{padding:20px 20px 22px;margin:25px 0;border-radius:11px;border:1px solid #c7e0ef;background:#f1f8fd}
+.sector-title{font-size:13px;font-weight:750;color:#143e5f;letter-spacing:.15px;margin-bottom:18px}
+.handoff-box{padding:22px;margin-bottom:24px;background:#eef6fc;border:1px solid #d1e5f3;border-radius:10px}
+.handoff-box .switch-line{margin:14px 0 6px;max-width:none;font-weight:650;color:#2a526c}
+.handoff-box .helper{margin:2px 0 20px}
+.action-card .supplier-copy{background:#d8eaf7;border-color:#d8eaf7;color:#123b60;margin-top:8px}
+@media(max-width:760px){.call-guide{grid-template-columns:1fr;padding:21px;gap:17px}.call-guide .call-note{grid-column:1}.call-guide h3{font-size:24px}}
+.action-card:first-child .supplier-copy{background:#d8eaf7;border-color:#d8eaf7;color:#123b60}
