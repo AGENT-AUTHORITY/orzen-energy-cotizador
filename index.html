@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#091e34">
+  <meta name="description" content="Herramienta interna de relevamiento y precotización para oportunidades energéticas ORZEN Energy.">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <title>ORZEN Energy | Mesa comercial</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Navegación de ORZEN">
+      <a class="brand" href="https://www.orzenenergy.com" target="_blank" rel="noopener noreferrer" aria-label="ORZEN Energy, sitio oficial"><img src="assets/logo-blanco.svg" alt="ORZEN Energy"></a>
+      <div class="sidebar-label">OPERACIONES COMERCIALES</div>
+      <nav class="side-nav">
+        <a href="#relevamiento" class="active"><span class="nav-number">01</span> Relevamiento</a>
+        <a href="#dimensionamiento"><span class="nav-number">02</span> Instalación y consumo</a>
+        <a href="#economia"><span class="nav-number">03</span> Valores autorizados</a>
+        <a href="#documentacion"><span class="nav-number">04</span> Documentación</a>
+      </nav>
+      <div class="sidebar-footer"><span class="live-mark"></span> Plataforma comercial privada <small>Sin servidores · Los borradores quedan en este navegador</small></div>
+    </aside>
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumb">ORZEN <span>/</span> DESARROLLO DE OPORTUNIDADES</div>
+        <a class="top-link" href="https://www.orzenenergy.com" target="_blank" rel="noopener noreferrer">Ir a la web <span aria-hidden="true">↗</span></a>
+      </header>
+      <section class="intro" aria-labelledby="page-title">
+        <div class="intro-copy"><div class="eyebrow"><span class="line"></span> INTELIGENCIA COMERCIAL / ENERGÍA</div><h1 id="page-title">Cada operación comienza <em>con información precisa.</em></h1><p>Relevá una necesidad, prepará una propuesta preliminar y compartí con el equipo técnico la información necesaria para avanzar.</p><div class="intro-chips"><span>GLP A GRANEL</span><span>DIÉSEL</span><span>INDUSTRIA & AGRO</span></div></div>
+        <div class="intro-art" aria-hidden="true"><span class="art-label">ORZEN / ENERGY</span><div class="art-glow"></div></div>
+      </section>
+      <section class="workspace" aria-label="Mesa de cotizaciones">
+        <div class="workspace-title"><div><div class="eyebrow dark"><span class="line"></span> ESPACIO DE TRABAJO</div><h2>Ficha de oportunidad</h2><p>Completá los datos disponibles. Podés guardar y retomar cuando quieras.</p></div><div class="version">VERSIÓN 1.0 <span>•</span> ORZEN</div></div>
+        <div class="notice" role="note"><span class="notice-icon">i</span><div><strong>Documento preliminar, no vinculante.</strong> ORZEN facilita la conexión comercial con proveedores especializados. El dimensionamiento, disponibilidad, condiciones, precio final y ejecución requieren confirmación del proveedor y su equipo técnico.</div></div>
+        <form id="quoteForm" novalidate>
+          <section class="panel" id="relevamiento">
+            <div class="panel-heading"><span class="index">01</span><div><h3>Empresa y contacto</h3><p>Identificación del establecimiento y de la persona que decide.</p></div></div>
+            <div class="form-grid">
+              <label class="field span-2">Empresa / razón social <span class="required">*</span><input name="company" autocomplete="organization" required maxlength="140" placeholder="Nombre de la empresa"></label>
+              <label class="field">Responsable de contacto <input name="contact" maxlength="120" placeholder="Nombre y apellido"></label>
+              <label class="field">Cargo / área <input name="role" maxlength="120" placeholder="Compras, mantenimiento, dirección..."></label>
+              <label class="field">Teléfono / WhatsApp<input name="phone" type="tel" maxlength="75" placeholder="+54 ..."></label>
+              <label class="field">Correo electrónico<input name="email" type="email" maxlength="150" autocomplete="email" placeholder="nombre@empresa.com"></label>
+              <label class="field">Localidad <span class="required">*</span><input name="city" maxlength="120" required placeholder="Ej.: Crespo"></label>
+              <label class="field">Provincia<select name="province"><option value="">Seleccionar</option><option>Santa Fe</option><option>Entre Ríos</option><option>Buenos Aires</option><option>Córdoba</option><option>Otra provincia</option></select></label>
+              <label class="field span-2">Dirección / referencia de planta<input name="address" maxlength="240" placeholder="Ruta, km, parque industrial, coordenadas..."></label>
+              <label class="field">Sector productivo<select name="industry"><option value="">Seleccionar actividad</option><option>Avicultura / granjas</option><option>Acopio y secado de granos</option><option>Agroindustria</option><option>Industria alimenticia</option><option>Industria manufacturera</option><option>Logística / transporte</option><option>Otra industria</option></select></label>
+              <label class="field">Estado de la oportunidad<select name="status"><option>Contacto inicial</option><option>Necesidad identificada</option><option>Visita técnica solicitada</option><option>En evaluación del proveedor</option><option>Propuesta técnica recibida</option><option>Operación cerrada</option><option>Descartada</option></select></label>
+            </div>
+          </section>
+          <section class="panel" id="dimensionamiento">
+            <div class="panel-heading"><span class="index">02</span><div><h3>Necesidad energética</h3><p>Datos declarados por el prospecto; nunca reemplazan el relevamiento técnico.</p></div></div>
+            <div class="energy-toggle" role="group" aria-label="Tipo de combustible"><label><input type="radio" name="fuel" value="GLP a granel" checked><span>GLP a granel</span></label><label><input type="radio" name="fuel" value="Diésel"><span>Diésel</span></label></div>
+            <div class="form-grid">
+              <label class="field">Combustible que utiliza hoy<input name="currentFuel" maxlength="120" placeholder="Ej.: gasoil, GLP, biomasa..."></label>
+              <label class="field">Uso / proceso principal<input name="application" maxlength="160" placeholder="Ej.: calefacción de galpones"></label>
+              <label class="field">Consumo mensual estimado<input name="consumption" type="number" min="0" step="any" inputmode="decimal" placeholder="Sin estimación"></label>
+              <label class="field">Unidad de consumo<select name="consumptionUnit"><option>kg/mes</option><option>L/mes</option><option>m³/mes (gas)</option><option>Otro / por confirmar</option></select></label>
+              <label class="field">Cantidad de establecimientos<input name="sites" type="number" min="1" step="1" placeholder="1"></label>
+              <label class="field">Plazo estimado<select name="timeline"><option>Sin definir</option><option>Inmediato</option><option>30 días</option><option>60 a 90 días</option><option>Más de 90 días</option></select></label>
+              <label class="field span-2">Equipos / potencias / horarios de uso<textarea name="equipment" rows="3" maxlength="2500" placeholder="Equipamiento relevante, horas de operación, temporada, potencia disponible si se conoce..."></textarea></label>
+            </div>
+            <div id="glpPanel" class="fuel-panel">
+              <div class="subheading"><h4>Tanque de GLP a evaluar</h4><span>CAPACIDAD NO DEFINITIVA</span></div>
+              <p class="helper">Seleccioná únicamente una capacidad mencionada o requerida por el cliente. No la asignamos automáticamente a partir del consumo.</p>
+              <div class="tank-grid" id="tankGrid" role="group" aria-label="Capacidad del tanque"><label class="tank-card"><input type="radio" name="tank" value="" checked><span>Por definir</span><small>Revisión técnica</small></label><label class="tank-card"><input type="radio" name="tank" value="500"><span>500 L</span><small>0,5 m³</small></label><label class="tank-card"><input type="radio" name="tank" value="1000"><span>1.000 L</span><small>1 m³</small></label><label class="tank-card"><input type="radio" name="tank" value="2000"><span>2.000 L</span><small>2 m³</small></label><label class="tank-card"><input type="radio" name="tank" value="4000"><span>4.000 L</span><small>4 m³</small></label><label class="tank-card"><input type="radio" name="tank" value="7300"><span>7.300 L</span><small>7,3 m³</small></label></div>
+              <div class="form-grid glp-extra"><label class="field">Ubicación propuesta<select name="tankLocation"><option>Por confirmar</option><option>Exterior / superficie</option><option>Enterrado / semienterrado</option><option>Otra / requiere visita</option></select></label><label class="field">Instalación actual<select name="existingTank"><option>Sin informar</option><option>Instalación nueva</option><option>Tanque existente</option><option>Ampliación / reemplazo</option></select></label></div>
+              <div class="scheme"><div class="scheme-heading"><span>REFERENCIA VISUAL</span><strong id="schemeTitle">Equipo pendiente de definir</strong></div><div id="schemeVisual" class="scheme-visual" aria-label="Esquema conceptual ilustrativo de tanque"></div><p>Esquema conceptual sin escala ni especificaciones de montaje. No constituye un plano de ingeniería, habilitación ni aprobación técnica.</p></div>
+            </div>
+            <div id="dieselPanel" class="fuel-panel hidden"><div class="subheading"><h4>Abastecimiento de diésel</h4><span>RELEVAMIENTO COMERCIAL</span></div><div class="form-grid"><label class="field">Destino del combustible<select name="dieselUse"><option>Por definir</option><option>Maquinaria / equipamiento</option><option>Flota / transporte</option><option>Generación eléctrica</option><option>Calderas / procesos térmicos</option><option>Otro</option></select></label><label class="field">Almacenamiento / entrega<input name="dieselStorage" maxlength="200" placeholder="Ej.: tanque propio, entregas semanales"></label></div></div>
+            <div class="form-grid"><label class="field span-2">Observaciones y requerimientos<textarea name="notes" rows="4" maxlength="4000" placeholder="Necesidad, restricciones de acceso, responsable de visita, fechas, equipos, estado del proveedor..." ></textarea></label></div>
+          </section>
+          <section class="panel" id="economia">
+            <div class="panel-heading"><span class="index">03</span><div><h3>Valores y condiciones a confirmar</h3><p>El presupuesto económico se completa solo con importes proporcionados o autorizados por el proveedor.</p></div></div>
+            <div class="notice mini"><span class="notice-icon">!</span><div><strong>Sin tarifas precargadas.</strong> Los importes de la aplicación original eran demostrativos; no se incorporaron. No se imprimen precios en la ficha del cliente mientras estén sin validar.</div></div>
+            <div class="form-grid"><label class="field">Estado de precios<select name="priceStatus"><option value="pending">Pendientes de confirmación</option><option value="authorized">Confirmados por proveedor</option></select></label><label class="field">Referencia interna de tarifa<input name="tariffRef" maxlength="180" placeholder="Ej.: tarifario recibido / fecha"></label></div>
+            <div class="items-bar"><h4>Conceptos económicos</h4><button class="btn tiny outline" id="addItem" type="button">+ Agregar concepto</button></div>
+            <div class="item-scroller"><table class="items-table"><thead><tr><th>Concepto</th><th>Cant.</th><th>Unidad</th><th>Precio unit. ARS</th><th>Total</th><th></th></tr></thead><tbody id="itemRows"></tbody></table></div>
+            <div class="totals"><div><span>Subtotal informado</span><strong id="subTotal">A confirmar</strong></div><div><span>IVA (solo si corresponde)</span><strong id="taxTotal">A confirmar</strong></div><div class="grand"><span>Total orientativo</span><strong id="grandTotal">A confirmar</strong></div></div>
+            <label class="switch-line"><input type="checkbox" name="includeVat"><span>Calcular IVA del 21% sobre los conceptos informados, si corresponde a la operación</span></label>
+            <label class="switch-line"><input type="checkbox" name="includeClientPrices"><span>Autorizar la inclusión de importes ya confirmados en el documento que recibe el cliente</span></label><div class="form-grid"><label class="field span-2">Condiciones / aclaraciones del proveedor<textarea name="commercialTerms" rows="3" maxlength="2000" placeholder="Completar cuando el proveedor confirme valores, alcance, logística y vigencia."></textarea></label></div>
+          </section>
+          <section class="panel" id="documentacion">
+            <div class="panel-heading"><span class="index">04</span><div><h3>Documentación y próximos pasos</h3><p>Dos documentos, un solo relevamiento: equipo comercial y prospecto.</p></div></div>
+            <label class="switch-line"><input type="checkbox" name="includeClientPlan"><span>Incluir en el PDF del cliente el plano adjunto si el proveedor autorizó compartirlo</span></label><div class="form-grid"><label class="field span-2">Adjuntar imagen de plano validado (opcional)<input id="planUpload" type="file" accept="image/png,image/jpeg,image/webp"><small>Se mostrará únicamente en el documento técnico interno. No se guarda dentro de los borradores; hay que volver a adjuntarla al reabrirlos.</small></label><div id="planPreview" class="plan-preview hidden"></div><label class="field span-2">Próximo paso acordado<textarea name="nextStep" rows="3" maxlength="1200" placeholder="Ej.: Brian debe coordinar visita; confirmar consumo y disponibilidad de tanque."></textarea></label></div>
+            <div class="action-cards"><div class="action-card"><span class="action-number">A / INTERNO</span><h4>Ficha para el proveedor</h4><p>Incluye contacto, consumo, instalación, observaciones y valores internos disponibles.</p><button class="btn primary" type="button" id="supplierPrint">Generar ficha para Brian ↗</button></div><div class="action-card"><span class="action-number">B / CLIENTE</span><h4>Resumen para el cliente</h4><p>Presentación clara de la necesidad relevada y próximos pasos. Sin precios no confirmados.</p><button class="btn secondary" type="button" id="clientPrint">Generar resumen comercial ↗</button></div></div>
+          </section>
+        </form>
+        <section class="save-panel" aria-label="Guardar y gestionar fichas"><div><div class="eyebrow dark"><span class="line"></span> RESPALDO LOCAL</div><h3>Tu trabajo, siempre bajo control.</h3><p>Los datos se guardan solo en este navegador. Exportá respaldos si vas a cambiar de computadora.</p></div><div class="save-actions"><button type="button" id="saveDraft" class="btn primary">Guardar ficha</button><button type="button" id="newDraft" class="btn outline">Nueva ficha</button><button type="button" id="exportJson" class="btn outline">Exportar respaldo</button><label class="btn outline import-btn">Importar respaldo<input id="importJson" type="file" accept="application/json,.json" hidden></label></div><div id="savedList" class="saved-list"></div></section>
+        <footer class="footer">ORZEN ENERGY <span>·</span> Desarrollo comercial independiente <span>·</span> <a href="https://www.orzenenergy.com">www.orzenenergy.com</a><small>Herramienta interna. No reemplaza relevamientos, autorizaciones ni documentación técnica de un proveedor habilitado.</small></footer>
+      </section>
+    </main>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="printArea" class="print-area" aria-hidden="true"></div>
+  <script src="app.js"></script>
+</body>
+</html>
